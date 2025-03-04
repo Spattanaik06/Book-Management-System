@@ -35,7 +35,7 @@ public class BookController
 	
 	
 	@PostMapping("/savebook")
-	public String addBook(@ModelAttribute Book book)
+	public String addBook( Book book)
 	{
 		bookService.addBook(book);
 		return "redirect:/booklist";
@@ -64,7 +64,7 @@ public class BookController
 	
 	
 	@PostMapping("editBook")
-	public String updatedBook(@ModelAttribute Book book)
+	public String updatedBook( Book book)
 	{
 		 bookService.updateBook(book);
 		 return"redirect:/booklist";
